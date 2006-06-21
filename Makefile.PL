@@ -2,15 +2,16 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-          'PL_FILES' => {},
-          'INSTALLDIRS' => 'site',
           'NAME' => 'Algorithm::Dependency::Objects',
           'VERSION_FROM' => 'lib/Algorithm/Dependency/Objects.pm',
           'PREREQ_PM' => {
-                           'Test::More' => '>= .47',
-                           'Scalar::Util' => '>= 1.10',
-                           'Set::Object' => 0,
-                           'Carp' => 0
-                         }
+                           'Carp' => '0',
+                           'Scalar::Util' => '1.10',
+                           'Set::Object' => '0',
+                           'Test::More' => '0.47'
+                         },
+          'INSTALLDIRS' => 'site',
+          'EXE_FILES' => [],
+          'PL_FILES' => {}
         )
 ;

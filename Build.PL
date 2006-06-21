@@ -8,9 +8,9 @@ Module::Build->new(
 	module_name => 'Algorithm::Dependency::Objects',
 	license => 'perl',
 	requires => {
-		'perl'				=> '>= 5.008',
-		'Test::More'		=> '>= .47',
-		'Scalar::Util'		=> '>= 1.10',
+		'perl'				=> '5.008',
+		'Test::More'		=> '0.47',
+		'Scalar::Util'		=> '1.10',
 		'Carp'				=> 0,
 		'Set::Object'		=> 0,
 	},

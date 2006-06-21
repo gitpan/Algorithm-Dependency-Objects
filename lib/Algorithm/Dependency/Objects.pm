@@ -5,7 +5,7 @@ package Algorithm::Dependency::Objects;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Scalar::Util qw/blessed/;
 use Carp qw/croak/;
@@ -21,16 +21,16 @@ sub new {
     	    || croak "You must provide an 'objects' parameter, and it must be a Set::Object";
     # all the contents of the Set::Object must have depends methods
     $_->can("depends") || croak "Objects must have a 'depends' method"
-        foreach $params{'objects'}->members();  	    
+        foreach $params{'objects'}->members();
 	# selected is an optional parameter, and ...
-    (blessed($params{'selected'}) && $params{'selected'}->isa('Set::Object') 
+    (blessed($params{'selected'}) && $params{'selected'}->isa('Set::Object')
         && $params{'selected'}->subset($params{'objects'})) # must be a subset of objects
             || croak "'selected' parameter must be a Set::Object, and a subset of 'objects'"
-                if exists $params{'selected'};	
+                if exists $params{'selected'};
 
 	my $dependant = Set::Object->new(map { $_->depends } $params{'objects'}->members);
 	my $unresolvable = $dependant->difference($params{'objects'});
-	
+
 	if ($unresolvable->size){
 		croak "Unresolvable items: " . join(", ", $unresolvable->members) . " resolvable " . join(", ", $params{'objects'}->members);
 	}
@@ -90,7 +90,7 @@ __END__
 
 =head1 NAME
 
-Algorithm::Dependency::Objects - An implementation of an Object Dependency Algorithm 
+Algorithm::Dependency::Objects - An implementation of an Object Dependency Algorithm
 
 =head1 SYNOPSIS
 
@@ -145,7 +145,7 @@ Yuval Kogman
 
 Stevan Little
 
-COPYRIGHT AND LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2005 Yuval Kogman, Stevan Little
 
