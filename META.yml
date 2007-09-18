@@ -1,6 +1,6 @@
 ---
 name: Algorithm-Dependency-Objects
-version: 0.02
+version: 0.03
 author: []
 abstract: An implementation of an Object Dependency Algorithm
 license: perl
@@ -10,16 +10,17 @@ requires:
   Carp: 0
   Scalar::Util: 1.10
   Set::Object: 0
+  Test::Deep: 0
   Test::More: 0.47
   perl: 5.008
 provides:
   Algorithm::Dependency::Objects:
     file: lib/Algorithm/Dependency/Objects.pm
-    version: 0.02
+    version: 0.03
   Algorithm::Dependency::Objects::Ordered:
     file: lib/Algorithm/Dependency/Objects/Ordered.pm
     version: 0.01
-generated_by: Module::Build version 0.2801
+generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

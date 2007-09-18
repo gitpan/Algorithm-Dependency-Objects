@@ -8,6 +8,7 @@ WriteMakefile
                            'Carp' => '0',
                            'Scalar::Util' => '1.10',
                            'Set::Object' => '0',
+                           'Test::Deep' => '0',
                            'Test::More' => '0.47'
                          },
           'INSTALLDIRS' => 'site',
