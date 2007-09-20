@@ -1,4 +1,3 @@
-Build.PL
 Changes
 lib/Algorithm/Dependency/Objects.pm
 lib/Algorithm/Dependency/Objects/Ordered.pm
@@ -8,4 +7,3 @@ META.yml
 t/01_basics.t
 t/pod.t
 t/pod_coverage.t
-SIGNATURE    Added here by Module::Build
